@@ -152,7 +152,7 @@ st.markdown(
     """
     <div class="hero">
         <h1>Text <span class="accent">Summarizer</span></h1>
-        <p>Powered by Gemini 1.5 Flash · Instant, intelligent condensation</p>
+        <p>Powered by Gemini 2.5 Flash · Instant, intelligent condensation</p>
     </div>
     <hr class="divider">
     """,
@@ -225,7 +225,7 @@ if summarize_clicked:
         with st.spinner("Generating summary…"):
             try:
                 genai.configure(api_key=api_key)
-                model = genai.GenerativeModel("gemini-1.5-flash-latest")
+                model = genai.GenerativeModel("gemini-2.5-flash")
                 response = model.generate_content(prompt)
                 summary = response.text.strip()
 
