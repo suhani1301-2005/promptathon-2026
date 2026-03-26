@@ -225,7 +225,7 @@ if summarize_clicked:
         with st.spinner("Generating summary…"):
             try:
                 genai.configure(api_key=api_key)
-                model = genai.GenerativeModel("gemini-1.5-flash")
+                model="gemini-1.5-flash-latest"
                 response = model.generate_content(prompt)
                 summary = response.text.strip()
 
